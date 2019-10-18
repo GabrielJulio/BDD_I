@@ -79,3 +79,7 @@ PRIMARY KEY (Fun_ID, Depen_Nome),
 CONSTRAINT Depen_Fun_ID FOREIGN KEY (Fun_ID) REFERENCES FUNCIONARIO (Fun_ID),
 CONSTRAINT Fun_Ck_Sexo CHECK (Fun_Sexo IN ('F','M'))
 );
+
+/* alterando tabelas */
+ALTER TABLE FUNCIONARIO ADD (Fun_Diploma VARCHAR(20));
+ALTER TABLE FUNCIONARIO DROP (Fun_Diploma);
