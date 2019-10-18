@@ -6,5 +6,5 @@ Banco de Dados I - Arquivo de texto com os comandos para criação do banco de d
 - [x] Tabela **Departamento**
 - [x] Tabela **Local_Dep**
 - [x] Tabela **Projeto**
-- [ ] Tabela **Trabalha_Em**
-- [ ] Tabela **Dependente**
+- [x] Tabela **Trabalha_Em**
+- [x] Tabela **Dependente**
