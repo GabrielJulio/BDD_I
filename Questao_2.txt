@@ -1,0 +1,10 @@
+/* Questao 2 */
+CREATE DATABASE teste_2
+USE teste_2
+
+CREATE TABLE PAIS(
+Pais_Cod int NOT NULL,
+Pais_Nome VARCHAR(50) NOT NULL,
+
+PRIMARY KEY (Pais_Cod)
+);
