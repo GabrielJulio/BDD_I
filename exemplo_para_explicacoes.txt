@@ -90,3 +90,26 @@ ALTER TABLE FUNCIONARIO DROP (Fun_PlacaAutomovel);
 ALTER TABLE FUNCIONARIO ADD (CPF_Supervisor VARCHAR(11) NULL);
 ALTER TABLE DEPARTAMENTO ADD CONSTRAINT Funcionario_fk1 FOREIGN KEY (CPF_Supervisor) REFERENCES FUNCIONARIO (CPF);
 ALTER TABLE FUNCIONARIO ADD CONSTRAINT Funcionario_fk2 FOREIGN KEY (Dnr) REFERENCES DEPARTAMENTO (Dnumero);
+
+22/11/2019:
+- Alias: serve para facilitar/agilizar o uso das tabelas no código
+e.g.:
+FROM store s, rental r, customer c, language l
+
+- Like: uma forma mais poderosa na busca por texto, ideal para quando você não sabe o texto completo que está armazenado no banco (Busca CASE-INSENSITIVE)
+e.g.:
+/* Buscando por país que começa por 'Br' */
+WHERE country like'Br%'
+/* Buscando por país que termina com 'an' */
+WHERE country like'%an'
+/* Buscando por país que contém a letra 'v' */
+WHERE country like'%v%'
+
+- Order By: ordena os resultados obtidos, use após o WHERE, por padrão ele ordena de forma alfabética/crescente, você deve informar o campo que será ordenado (pode ser passado mais de um campo)
+e.g.:
+/* Ordenando clientes por nome e depois por sobrenome */
+ORDER BY first_name, last_name
+/* Ordenando clientes por id em ordem decrescente  */
+ORDER BY customer_id DESC
+
+- Group By e Count: ficaram para a próxima aula.
